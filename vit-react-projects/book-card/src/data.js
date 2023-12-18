@@ -1,32 +1,37 @@
 export default [
   {
     id: 1,
-    name: 'Bertie Yates',
-    age: 29,
-    image: 'https://www.course-api.com/images/people/person-1.jpeg',
+    title: "Harry Potter and The Sorcerer's Stone",
+    image: "./assets/images/1.png",
   },
   {
     id: 2,
-    name: 'Hester Hogan',
-    age: 32,
-    image: 'https://www.course-api.com/images/people/person-2.jpeg',
+    title: "Chamber of Secrets",
+    image: "./assets/images/2.png",
   },
   {
     id: 3,
-    name: 'Larry Little',
-    age: 36,
-    image: 'https://www.course-api.com/images/people/person-3.jpeg',
+    title: " Prisoner of Azkaban",
+    image: "./assets/images/3.png",
   },
   {
     id: 4,
-    name: 'Sean Walsh',
-    age: 34,
-    image: 'https://www.course-api.com/images/people/person-4.jpeg',
+    title: "Goblet of Fire",
+    image: "./assets/images/4.png",
   },
   {
     id: 5,
-    name: 'Lola Gardner',
-    age: 29,
-    image: 'https://www.course-api.com/images/people/person-5.jpeg',
+    title: "Order of the Phoenix",
+    image: "./assets/images/5.png",
+  },
+  {
+    id: 6,
+    title: "Half-Blood Prince",
+    image: "./assets/images/6.png",
+  },
+  {
+    id: 7,
+    title: "Deathly Hallows",
+    image: "./assets/images/7.png",
   },
 ];
