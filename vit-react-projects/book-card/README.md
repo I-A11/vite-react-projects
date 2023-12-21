@@ -10,4 +10,3 @@
 4- Import the List component and pass the state as a prop.
 5- Map through data and display it using the Card component.
 6- In the Card component receive props and style the Card component.
-7- In app.jsx create clear and refresh buttons.
