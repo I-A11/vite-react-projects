@@ -23,7 +23,11 @@ const App = () => {
   }, []);
 
   if (isLoading) {
-    return <div>Loading...</div>;
+    return (
+      <section className="jobs-center">
+        <div className="loading"></div>
+      </section>
+    );
   }
 
   return <h2>Tabs Starter</h2>;
