@@ -9,6 +9,7 @@ const Form = ({ addItem }) => {
     addItem(newItemName);
     setNewItemName("");
   };
+
   return (
     <form onSubmit={handleSubmit}>
       <h4>grocery bud</h4>
