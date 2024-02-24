@@ -1,6 +1,6 @@
 import { createContext, useState, useContext } from "react";
 
-const AppContext = useContext();
+const AppContext = createContext();
 
 export const AppProvider = ({ children }) => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
@@ -20,7 +20,7 @@ export const AppProvider = ({ children }) => {
   };
 
   return (
-    <AppContext.AppProvider
+    <AppContext.Provider
       value={{
         isSidebarOpen,
         isModalOpen,
@@ -31,7 +31,7 @@ export const AppProvider = ({ children }) => {
       }}
     >
       {children}
-    </AppContext.AppProvider>
+    </AppContext.Provider>
   );
 };
 
