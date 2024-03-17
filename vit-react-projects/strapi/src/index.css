@@ -354,6 +354,7 @@ Sidebar
   opacity: 0;
   visibility: hidden;
 }
+
 .show-sidebar {
   opacity: 1;
   visibility: visible;
@@ -377,9 +378,11 @@ Sidebar
   right: 1rem;
   cursor: pointer;
 }
+
 .sidebar article {
   margin-bottom: 2rem;
 }
+
 .sidebar h4 {
   margin-bottom: 1rem;
   color: var(--primary-700);
@@ -399,9 +402,11 @@ Sidebar
   align-items: center;
   gap: 1rem;
 }
+
 .sidebar-sublinks svg {
   color: var(--grey-500);
 }
+
 @media screen and (min-width: 992px) {
   .sidebar {
     display: none;
@@ -420,14 +425,15 @@ Nav Links
   .nav-links {
     display: flex;
     justify-content: center;
-
     align-self: stretch;
   }
+
   .nav-center {
     align-self: stretch;
     display: grid;
     grid-template-columns: auto 1fr;
   }
+
   .nav-link {
     padding: 0 1rem;
     color: var(--white);
