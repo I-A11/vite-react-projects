@@ -451,11 +451,11 @@ Nav Links
 Submenu
 =============== 
 */
-.submenu {
+/* .submenu {
   display: none;
-}
+} */
 @media screen and (min-width: 992px) {
-  .submenu {
+  /* .submenu {
     display: block;
     position: fixed;
     top: 7rem;
@@ -472,30 +472,30 @@ Submenu
     opacity: 0;
     transition: transform 0.3s ease-in-out, opacity 0.2s ease-in-out;
     z-index: -1;
-  }
-  .show-submenu {
+  } */
+  /* .show-submenu {
     visibility: visible;
     opacity: 1;
     transform: rotateX(0deg) translateX(-50%);
     z-index: 10;
-  }
-  .submenu h5 {
+  } */
+  /* .submenu h5 {
     margin-bottom: 1rem;
     color: var(--primary-700);
-  }
-  .submenu-links {
+  } */
+  /* .submenu-links {
     display: grid;
     row-gap: 0.5rem;
-  }
-  .submenu-links a {
+  } */
+  /* .submenu-links a {
     display: block;
     color: var(--grey-900);
     text-transform: capitalize;
     display: flex;
     align-items: center;
     gap: 1rem;
-  }
-  .submenu-links svg {
+  } */
+  /* .submenu-links svg {
     color: var(--grey-500);
-  }
+  } */
 }
