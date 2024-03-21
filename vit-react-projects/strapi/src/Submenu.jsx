@@ -1,12 +1,32 @@
 import sublinks from "./data";
 import { useGlobalContext } from "./Context";
+import { useRef } from "react";
 
 const Submenu = () => {
   const { pageId, setPageId } = useGlobalContext();
   const currentPage = sublinks.find((item) => item.pageId === pageId);
+  const submenuContainer = useRef();
+  const handleMouseLeave = (event) => {
+    const submenu = submenuContainer.current;
+    const { right, left, top, bottom } = submenu.getBoundingClientRect();
+    const { clientX, clientY } = event;
+
+    if (
+      clientX < left - 1 ||
+      clientX > right - 1 ||
+      clientY < top - 1 ||
+      clientY > bottom - 1
+    ) {
+      setPageId(null);
+    }
+  };
 
   return (
-    <div className="submenu">
+    <div
+      className={currentPage ? "submenu show-submenu" : "submenu"}
+      onMouseLeave={handleMouseLeave}
+      ref={submenuContainer}
+    >
       <h5>{currentPage?.page}</h5>
       <div
         className="submenu-links"
