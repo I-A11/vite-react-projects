@@ -1,11 +1,17 @@
 import { useContext, useReducer, useEffect, createContext } from "react";
-
+import reducer from "./reducer";
 const AppContext = createContext();
 
 export const AppProvider = ({ children }) => {
-  const greeting = "hello";
+  const initialState = {
+    loading: false,
+    cart: [],
+  };
+
+  const [state, dispatch] = useReducer(reducer, initialState);
+
   return (
-    <AppContext.Provider value={{ greeting }}>{children}</AppContext.Provider>
+    <AppContext.Provider value={{ ...state }}>{children}</AppContext.Provider>
   );
 };
 
