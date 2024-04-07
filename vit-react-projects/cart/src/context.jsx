@@ -1,5 +1,13 @@
 import { useContext, useReducer, useEffect, createContext } from "react";
 import reducer from "./reducer";
+import {
+  CLEAR_CART,
+  REMOVE,
+  INCREASE,
+  DECREASE,
+  LOADING,
+  DISPLAY_ITEMS,
+} from "./action";
 const AppContext = createContext();
 
 export const AppProvider = ({ children }) => {
