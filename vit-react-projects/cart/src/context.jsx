@@ -11,16 +11,22 @@ import {
 } from "./action";
 const AppContext = createContext();
 
-export const AppProvider = ({ children }) => {
-  const initialState = {
-    loading: false,
-    cart: new Map(cartItems.map((item) => [item.id, item])),
-  };
+const initialState = {
+  loading: false,
+  cart: new Map(cartItems.map((item) => [item.id, item])),
+};
 
+export const AppProvider = ({ children }) => {
   const [state, dispatch] = useReducer(reducer, initialState);
 
+  const clearCart = () => {
+    dispatch({ type: CLEAR_CART });
+  };
+
   return (
-    <AppContext.Provider value={{ ...state }}>{children}</AppContext.Provider>
+    <AppContext.Provider value={{ ...state, clearCart }}>
+      {children}
+    </AppContext.Provider>
   );
 };
 
